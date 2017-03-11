@@ -1,0 +1,22 @@
+{
+  "name": "revstudio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paweljanuszkiewicz/revstudio.git"
+  },
+  "author": "Pawel Januszkiewicz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paweljanuszkiewicz/revstudio/issues"
+  },
+  "homepage": "https://github.com/paweljanuszkiewicz/revstudio#readme",
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7"
+  }
+}
