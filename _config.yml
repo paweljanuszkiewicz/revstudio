@@ -1,0 +1,17 @@
+destination: _site
+exclude:
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - resources
+  - _assets
+  - campton
+
+# collections:
+#   assets:
+#     permalink: /assets/:path/
+
+# Add collections if needed, i.e.
+#   products:
+#     output: true
+#     permalink: /products/:path/
