@@ -1,15 +1,21 @@
 <header class="header">
 	<div class="container">
 		<div class="row">
-			<div class="col-xs-4 text-left">
-				Logo
+			<div class="col-xs-6 text-left">
+				<a href="index.html" class="header__logo logo logo--header">
+					<img src="assets/images/logo.svg" alt="REV Studio" class="logo__img">
+				</a>
 			</div>
-			<div class="col-xs-8 text-right">
+			<div class="col-xs-6 visible-xs text-right">
 				<div class="header__menu-wrapper">
 					<div class="header__hamburger" data-mobile-menu="hamburger">
 						<div class="bar"></div>
 						<div class="bar"></div>
 					</div>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-6 text-right">
+				<div class="header__menu-wrapper">
 					<ul class="header__menu" data-mobile-menu="menu">
 						{% include menu.html %}
 					</ul>

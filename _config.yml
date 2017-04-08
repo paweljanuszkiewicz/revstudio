@@ -4,12 +4,10 @@ exclude:
   - node_modules
   - gulpfile.js
   - resources
-  - _assets
   - campton
-
-# collections:
-#   assets:
-#     permalink: /assets/:path/
+collections:
+  assets:
+    permalink: /assets/:path/
 
 # Add collections if needed, i.e.
 #   products:

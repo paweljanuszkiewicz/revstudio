@@ -1,0 +1,20 @@
+.logo {
+	$this: #{&};
+	display: block;
+
+	&--header {
+		#{$this}__img {
+			max-height: 28px;
+		}
+	}
+
+	&--footer {
+		#{$this}__img {
+			max-height: 16px;
+		}
+	}
+
+	&__img {
+		display: inline-block;
+	}
+}
