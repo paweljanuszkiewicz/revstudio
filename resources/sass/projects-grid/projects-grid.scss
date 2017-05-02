@@ -1,0 +1,53 @@
+.projects-grid {
+	$this: #{&};
+	$tile: '.tile';
+
+	@mixin tile ($width, $offset, $y) {
+		position: relative;
+		top: floor(-$y * 1px);
+		margin-bottom: 0;
+
+		#{$this}__tile {
+			@media (min-width: $screen-md-min) {
+				@include make-md-column($width);
+				@include make-md-column-offset($offset);
+
+				& > * {
+					height: floor($width * 100px);
+				}
+			}
+		}
+	}
+
+	border: 1px solid red;
+	&__wrapper {
+		& > * + * {
+			margin-top: $grid-gutter-width/2;
+			@media (min-width: $screen-md-min) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	&__tile-row {
+		@include make-row;
+		border: 1px dashed gray;
+
+		& > #{$this}__tile {
+			@include make-xs-column(12);
+		}
+
+		#{$tile} {
+			// height on mobile
+			height: 321px;
+		}
+
+		&:nth-child(7n + 1) { @include tile(3, 4, 0); }
+		&:nth-child(7n + 2) { @include tile(4, 7, 0); }
+		&:nth-child(7n + 3) { @include tile(3, 1, 0); }
+		&:nth-child(7n + 4) { @include tile(3, 7, 0); }
+		&:nth-child(7n + 5) { @include tile(4, 3, 0); }
+		&:nth-child(7n + 6) { @include tile(3, 1, 0); }
+		&:nth-child(7n + 7) { @include tile(4, 7, 0); }
+	}
+}
