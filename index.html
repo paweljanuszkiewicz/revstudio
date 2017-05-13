@@ -3,55 +3,66 @@ layout: default
 title: Home
 ---
 <div class="projects-grid">
-	<!-- <h1 class="projects-grid__heading">rev.<br>olution</h1> -->
+	<h1 class="projects-grid__heading">rev.<br>olution</h1>
+	<a href="mailto:hello@revstudio.pl" class="projects-grid__contact">hello@revstudio.pl</a>
 	<div class="projects-grid__wrapper">
+		{% for post in site.posts %}
+			<div class="projects-grid__tile-row">
+				<div class="projects-grid__tile">
+					<a href="{{ post.url }}" class="tile" style="background-image: url('assets/images/projects/bitmap@2x.png')">
+						{{ post.title }}
+					</a>
+				</div>
+			</div>
+		{% endfor %}
+
 		<div class="projects-grid__tile-row">
 			<div class="projects-grid__tile">
-				<div class="tile">
+				<a href="#" class="tile" style="background-image: url('assets/images/projects/bitmap@2x.png')">
 					tile
-				</div>
+				</a>
 			</div>
 		</div>
 		<div class="projects-grid__tile-row">
 			<div class="projects-grid__tile">
-				<div class="tile">
+				<a href="#" class="tile">
 					tile
-				</div>
+				</a>
 			</div>
 		</div>
 		<div class="projects-grid__tile-row">
 			<div class="projects-grid__tile">
-				<div class="tile">
+				<a href="#" class="tile">
 					tile
-				</div>
+				</a>
 			</div>
 		</div>
 		<div class="projects-grid__tile-row">
 			<div class="projects-grid__tile">
-				<div class="tile">
+				<a href="#" class="tile">
 					tile
-				</div>
+				</a>
 			</div>
 		</div>
 		<div class="projects-grid__tile-row">
 			<div class="projects-grid__tile">
-				<div class="tile">
+				<a href="#" class="tile">
 					tile
-				</div>
+				</a>
 			</div>
 		</div>
 		<div class="projects-grid__tile-row">
 			<div class="projects-grid__tile">
-				<div class="tile">
+				<a href="#" class="tile">
 					tile
-				</div>
+				</a>
 			</div>
 		</div>
 		<div class="projects-grid__tile-row">
 			<div class="projects-grid__tile">
-				<div class="tile">
+				<a href="#" class="tile">
 					tile
-				</div>
+				</a>
 			</div>
 		</div>
 
