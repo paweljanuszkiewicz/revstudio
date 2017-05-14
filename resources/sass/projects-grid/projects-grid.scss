@@ -5,7 +5,7 @@
 	position: relative;
 	margin-top: $grid-gutter-width;
 	margin-bottom: 2*$grid-gutter-width;
-	
+
 	@media (min-width: $screen-md-min) {
 		margin-bottom: 3*$grid-gutter-width;
 	}

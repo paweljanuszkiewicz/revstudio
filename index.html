@@ -9,8 +9,9 @@ title: Home
 		{% for post in site.posts %}
 			<div class="projects-grid__tile-row">
 				<div class="projects-grid__tile">
-					<a href="{{ post.url }}" class="tile" style="background-image: url('assets/images/projects/bitmap@2x.png')">
-						{{ post.title }}
+					<a href="{{ post.url }}" class="tile">
+						<div class="tile__background" style="background-image: url('{{ site.url }}/assets/images/{{ post.home-image }}')"></div>
+						<!-- post.title -->
 					</a>
 				</div>
 			</div>

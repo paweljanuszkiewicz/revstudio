@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{{ page.title }} - revStudio</title>
+	<link rel="stylesheet" href="{{ site.url }}/assets/styles.css">
+</head>
+<body>
+	{% include header.html %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>{{ page.title }}</h1>
+				<ul>
+					{% for tag in page.tags %}
+						<li>{{ tag }}</li>
+					{% endfor %}
+		    	</ul>
+				{{ content }}
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-10 col-md-push-1">
+				<ul class="project__images">
+					{% for image in page.images %}
+						<li>
+							<img src="{{ site.url }}/assets/images/{{ image.url }}" alt="{% if image.alt %}{{ image.alt }}{% endif %}">
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="row next-prev">
+			{% include project-footer.html %}
+		</div>
+	</div>
+
+	{% include footer.html %}
+	<script src="{{ site.url }}/assets/scripts.js"></script>
+</body>
+</html>

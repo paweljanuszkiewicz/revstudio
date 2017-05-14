@@ -1,0 +1,19 @@
+.next-prev {
+	padding-top: $grid-gutter-width*2;
+	padding-bottom: $grid-gutter-width*2;
+	
+	@media (min-width: $screen-md-min) {
+		padding-top: $grid-gutter-width*3;
+		padding-bottom: $grid-gutter-width*3;
+	}
+
+	&__link {
+		font-size: $font-size-h2;
+		color: $gray-dark;
+		font-weight: $headings-font-weight;
+		&:hover, &:focus {
+			color: $gray-dark;
+			text-decoration: none;
+		}
+	}
+}
