@@ -1,4 +1,12 @@
 .about {
+	position: relative;
+
+	&__main-col {
+		@media (min-width: $screen-md-min) {
+
+		}
+	}
+
 	&__heading {
 		position: relative;
 		margin: 0;
@@ -6,7 +14,22 @@
 		top: $grid-gutter-width;
 		font-size: 64px;
 		@media (min-width: $screen-md-min) {
+			font-size: 100px;
+			margin-top: $grid-gutter-width;
+			top: 2*$grid-gutter-width;
+		}
+	}
 
+	&__image-bg {
+		display: none;
+		@media (min-width: $screen-md-min) {
+			display: inline-block;
+			width: 100%;
+			max-width: 300px;
+			position: absolute;
+			left: 50%;
+			top: -200px;
+			z-index: -1;
 		}
 	}
 
@@ -14,6 +37,10 @@
 		width: 100%;
 		max-width: 100%;
 		margin-bottom: 2*$grid-gutter-width;
+		@media (min-width: $screen-md-min) {
+			max-width: 370px;
+			margin-left: 18%;
+		}
 	}
 
 	&__text {
@@ -21,6 +48,17 @@
 		line-height: 1.8em;
 		p {
 			margin-bottom: 2em;
+		}
+
+		@media (min-width: $screen-md-min) {
+			position: relative;
+			max-width: 440px;
+			margin-left: auto;
+			margin-right: 0;
+		}
+
+		@media (min-width: $screen-lg-min) {
+			top: -250px;
 		}
 	}
 
@@ -51,6 +89,30 @@
 			height: 2px;
 			background-color: $gray-base;
 			transition: ease 400ms all;
+		}
+
+		@media (min-width: $screen-md-min) {
+			position: relative;
+			top: -800px;
+		}
+	}
+
+	&__list-abs {
+		@media (min-width: $screen-lg-min) {
+			position: absolute;
+			top: 160px;
+			left: 250px;
+		}
+	}
+
+	&__lists {
+		@media (min-width: $screen-md-min) {
+			position: relative;
+			top: -700px;
+		}
+
+		@media (min-width: $screen-lg-min) {
+			top: -770px;
 		}
 	}
 }
