@@ -1,12 +1,12 @@
-<div class="col-xs-6 text-left">
+<div class="col-xs-6 col-md-5 col-md-push-1 text-left">
 	{% if page.previous.url %}
 		<h5>poprzedni</h5>
-		<a class="next-prev__link" href="{{page.previous.url}}">{{page.previous.title}}</a>
+		<a class="next-prev__link" href="{{page.previous.url}}">{{page.previous.title | strip_html}}</a>
 	{% endif %}
 </div>
 <div class="col-xs-6 text-right">
 	{% if page.next.url %}
 		<h5>następny</h5>
-		<a class="next-prev__link" href="{{page.next.url}}">{{page.next.title}}</a>
+		<a class="next-prev__link" href="{{page.next.url}}">{{page.next.title | strip_html}}</a>
 	{% endif %}
 </div>

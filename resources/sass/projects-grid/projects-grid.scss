@@ -42,7 +42,6 @@
 
 	&__tile-row {
 		@include make-row;
-
 		& > #{$this}__tile {
 			@include make-xs-column(12);
 		}

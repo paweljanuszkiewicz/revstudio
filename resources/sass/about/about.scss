@@ -1,10 +1,8 @@
 .about {
 	position: relative;
 
-	&__main-col {
-		@media (min-width: $screen-md-min) {
-
-		}
+	@media (min-width: $screen-md-min) {
+		padding-bottom: $grid-gutter-width*2;
 	}
 
 	&__heading {
@@ -13,10 +11,17 @@
 		z-index: 10;
 		top: $grid-gutter-width;
 		font-size: 64px;
+
 		@media (min-width: $screen-md-min) {
-			font-size: 100px;
 			margin-top: $grid-gutter-width;
-			top: 2*$grid-gutter-width;
+			font-size: 120px;
+		}
+	}
+
+	&__images {
+		@media (min-width: $screen-md-min) {
+			margin-top: -50px;
+			margin-bottom: -250px;
 		}
 	}
 
@@ -50,15 +55,8 @@
 			margin-bottom: 2em;
 		}
 
-		@media (min-width: $screen-md-min) {
-			position: relative;
-			max-width: 440px;
-			margin-left: auto;
-			margin-right: 0;
-		}
-
 		@media (min-width: $screen-lg-min) {
-			top: -250px;
+			margin-left: $grid-gutter-width*.75;
 		}
 	}
 
@@ -90,15 +88,14 @@
 			background-color: $gray-base;
 			transition: ease 400ms all;
 		}
-
 		@media (min-width: $screen-md-min) {
 			position: relative;
-			top: -800px;
+			top: -100px;
 		}
 	}
 
 	&__list-abs {
-		@media (min-width: $screen-lg-min) {
+		@media (min-width: $screen-sm-min) {
 			position: absolute;
 			top: 160px;
 			left: 250px;
@@ -106,13 +103,12 @@
 	}
 
 	&__lists {
-		@media (min-width: $screen-md-min) {
+		@media (min-width: $screen-sm-min) {
 			position: relative;
-			top: -700px;
 		}
 
-		@media (min-width: $screen-lg-min) {
-			top: -770px;
+		@media (min-width: $screen-md-min) {
+			top: -20px;
 		}
 	}
 }
