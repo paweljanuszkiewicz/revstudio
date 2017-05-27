@@ -5,6 +5,7 @@ exclude:
   - gulpfile.js
   - resources
   - campton
+  - build.sh
 collections:
   assets:
     permalink: /assets/:path/
