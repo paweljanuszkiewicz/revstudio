@@ -3,8 +3,8 @@ layout: default
 title: Home
 ---
 <div class="projects-grid">
-	<h1 class="projects-grid__heading">rev.<br>olution</h1>
-	<a href="mailto:hello@revstudio.pl" class="projects-grid__contact">hello@revstudio.pl</a>
+	<h1 class="projects-grid__heading">rev.<br><span data-typed="title"></span></h1>
+	<a href="mailto:hello@revstudio.pl" class="projects-grid__contact" data-fixed>hello@revstudio.pl</a>
 	<div class="projects-grid__wrapper">
 		{% for post in site.posts %}
 			<div class="projects-grid__tile-row">
@@ -16,7 +16,16 @@ title: Home
 				</div>
 			</div>
 		{% endfor %}
-
+		{% for post in site.posts %}
+			<div class="projects-grid__tile-row">
+				<div class="projects-grid__tile">
+					<a href="{{ post.url }}" class="tile">
+						<div class="tile__background" style="background-image: url('{{ site.url }}/assets/images/{{ post.home-image }}')"></div>
+						<!-- post.title -->
+					</a>
+				</div>
+			</div>
+		{% endfor %}
 		<!-- <div class="projects-grid__tile-row">
 			<div class="projects-grid__tile">
 				<a href="#" class="tile" style="background-image: url('assets/images/projects/bitmap@2x.png')">

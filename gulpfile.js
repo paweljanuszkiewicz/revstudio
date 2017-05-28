@@ -30,7 +30,8 @@ gulp.task('styles', function () {
 gulp.task('scripts', function () {
   return gulp.src(
       ['node_modules/jquery/dist/jquery.js',
-       srcPath + 'js/**/*.js'])
+	  srcPath + 'js/assets/typed.js',
+       srcPath + 'js/scripts/**/*.js'])
     .pipe(sourcemaps.init())
     .pipe(concat('scripts.js'))
     .pipe(uglify())

@@ -6,4 +6,4 @@
 		$(this).toggleClass('is-active');
 		$menu.toggleClass('is-active');
 	});
-})();
+})(window);
