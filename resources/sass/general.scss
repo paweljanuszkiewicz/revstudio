@@ -4,3 +4,7 @@ body {
 		padding: $grid-gutter-width*2 0;
 	}
 }
+
+[data-typed] {
+	display: inline-block;
+}
