@@ -1,4 +1,39 @@
 .project {
+	&__title {
+		margin-top: $grid-gutter-width*2.5;
+		margin-bottom: $grid-gutter-width*1.5;
+		max-width: 50%;
+		font-size: 50px;
+		
+		@media (min-width: $screen-sm-min) {
+			font-size: 80px;
+		}
+		@media (min-width: $screen-md-min) {
+			font-size: 120px;
+			margin-bottom: $grid-gutter-width*5;
+		}
+	}
+
+	&__list {
+		margin-bottom: $grid-gutter-width !important;
+		@media (min-width: $screen-md-min) {
+			margin-bottom: $grid-gutter-width*3 !important;
+		}
+	}
+
+	&__text {
+		margin-bottom: $grid-gutter-width*2;
+		line-height: 1.8em;
+		p {
+			margin-bottom: 2em;
+		}
+
+		@media (min-width: $screen-md-min) {
+			margin-top: -6*$grid-gutter-width;
+			margin-bottom: $grid-gutter-width*3;
+		}
+	}
+
 	&__images {
 		list-style: none;
 		margin: 0;

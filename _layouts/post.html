@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>{{ page.title }} - revStudio</title>
+	<title>{{ page.title  | strip_html }} - revStudio</title>
 	<link rel="stylesheet" href="{{ site.url }}/assets/styles.css">
 </head>
 <body>
@@ -13,13 +13,25 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h1>{{ page.title }}</h1>
-				<ul>
-					{% for tag in page.tags %}
-						<li>{{ tag }}</li>
-					{% endfor %}
-		    	</ul>
-				{{ content }}
+				<h1 class="project__title">{{ page.title }}</h1>
+			</div>
+			<div class="col-xs-12 col-md-5 col-md-push-1">
+				{% capture difference %} {{ page.tags | size | minus:1 }} {% endcapture %}
+				{% unless difference contains '-' %}
+					<div class="project__list list">
+						<h5 class="list__heading">REV.IEW</h5>
+						<ul class="list__list">
+							{% for tag in page.tags %}
+								<li>{{ tag }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endunless %}
+			</div>
+			<div class="col-xs-12 col-md-5 col-md-push-1">
+				<div class="project__text">
+					{{ content }}
+				</div>
 			</div>
 		</div>
 
