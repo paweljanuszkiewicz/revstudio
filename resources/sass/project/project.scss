@@ -4,7 +4,7 @@
 		margin-bottom: $grid-gutter-width*1.5;
 		max-width: 50%;
 		font-size: 50px;
-		
+
 		@media (min-width: $screen-sm-min) {
 			font-size: 80px;
 		}
@@ -23,7 +23,7 @@
 
 	&__text {
 		margin-bottom: $grid-gutter-width*2;
-		line-height: 1.8em;
+		line-height: 2em;
 		p {
 			margin-bottom: 2em;
 		}

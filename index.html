@@ -6,22 +6,6 @@ title: Home
 	<h1 class="projects-grid__heading">rev.<br><span class="h1em"></span><span data-typed="title"></span></h1>
 	<a href="mailto:hello@revstudio.pl" class="projects-grid__contact" data-fixed>hello@revstudio.pl</a>
 	<div class="projects-grid__wrapper">
-		<div class="projects-grid__tile-row" data-parallax="1">
-			<div class="projects-grid__tile">
-				<a href="{{ post.url }}" class="tile">
-					<div class="tile__background" style="background-image: url('{{ site.url }}/assets/images/{{ post.home-image }}')"></div>
-					<!-- post.title -->
-				</a>
-			</div>
-		</div>
-		<div class="projects-grid__tile-row" data-parallax="2">
-			<div class="projects-grid__tile">
-				<a href="{{ post.url }}" class="tile">
-					<div class="tile__background" style="background-image: url('{{ site.url }}/assets/images/{{ post.home-image }}')"></div>
-					<!-- post.title -->
-				</a>
-			</div>
-		</div>
 		{% for post in site.posts %}
 			<div class="projects-grid__tile-row">
 				<div class="projects-grid__tile">

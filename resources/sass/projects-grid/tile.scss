@@ -3,11 +3,11 @@
 	display: block;
 	position: relative;
 	overflow: hidden;
-	background-color: $gray-light;
+	background-color: rgba(255, 255, 255, 0);
 
 	&:hover {
 		#{$this}__background {
-			transform: scale(1.2);
+			transform: translateZ(0) scale(1.2);
 		}
 	}
 
@@ -19,6 +19,8 @@
 		height: 100%;
 		background-size: cover;
 		background-repeat: no-repeat;
+		-webkit-backface-visibility: hidden;
+    	-webkit-transform: translateZ(0) scale(1.0, 1.0);
 		transition: ease 400ms all;
 	}
 }
