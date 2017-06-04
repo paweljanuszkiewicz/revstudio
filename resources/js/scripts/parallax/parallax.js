@@ -6,13 +6,13 @@
 		$elem.attr('data-parallax', layer);
 	}
 
-	setAttr($('.projects-grid__tile-row:nth-child(7n+1)'), 'downMore');
-	setAttr($('.projects-grid__tile-row:nth-child(7n+2)'), 'up');
-	setAttr($('.projects-grid__tile-row:nth-child(7n+3)'), 'up');
-	setAttr($('.projects-grid__tile-row:nth-child(7n+4)'), 'down');
-	setAttr($('.projects-grid__tile-row:nth-child(7n+5)'), 'upMore');
-	setAttr($('.projects-grid__tile-row:nth-child(7n+6)'), 'up');
-	setAttr($('.projects-grid__tile-row:nth-child(7n+7)'), 'down');
+	// setAttr($('.projects-grid__tile-row:nth-child(7n+1)'), 'downMore');
+	// setAttr($('.projects-grid__tile-row:nth-child(7n+2)'), 'up');
+	// setAttr($('.projects-grid__tile-row:nth-child(7n+3)'), 'up');
+	// setAttr($('.projects-grid__tile-row:nth-child(7n+4)'), 'down');
+	// setAttr($('.projects-grid__tile-row:nth-child(7n+5)'), 'upMore');
+	// setAttr($('.projects-grid__tile-row:nth-child(7n+6)'), 'up');
+	// setAttr($('.projects-grid__tile-row:nth-child(7n+7)'), 'down');
 
 
 	function debounce(func, wait, immediate) {

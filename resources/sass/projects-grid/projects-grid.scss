@@ -1,7 +1,8 @@
 .projects-grid {
 	$this: #{&};
 	$tile: '.tile';
-	$tile-base-height: 321px;
+	$tile-base-height: 332px;
+
 	position: relative;
 	margin-top: $grid-gutter-width;
 	margin-bottom: 2*$grid-gutter-width;
@@ -25,7 +26,7 @@
 				@include make-md-column-offset($offset);
 
 				& > * {
-					height: floor($width * 100px);
+					height: floor($width * 114px);
 				}
 			}
 		}
@@ -109,6 +110,11 @@
 		font-weight: 700;
 		padding-bottom: 4px;
 		z-index: 10;
+
+		@media (max-height: $tile-base-height + 100) {
+			top: 80px;
+		}
+
 		&:hover, &:focus {
 			text-decoration: none;
 			color: $gray-base;

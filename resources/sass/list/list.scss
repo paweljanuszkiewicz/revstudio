@@ -13,7 +13,7 @@
 
 		li {
 			margin: 0;
-			margin-bottom: 1em;
+			margin-bottom: .8em;
 		}
 
 		a {
@@ -31,7 +31,7 @@
 				height: 1px;
 				transition: ease 400ms width;
 			}
-			&:hover, &.active {
+			&:hover, &:focus, &.active {
 				text-decoration: none;
 				&:before {
 					width: 100%;
