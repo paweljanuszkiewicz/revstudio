@@ -9,7 +9,13 @@ title: Home
 		{% for post in site.posts %}
 			<div class="projects-grid__tile-row">
 				<div class="projects-grid__tile">
-					<a href="{{ post.url }}" class="tile">
+					<a href="{{ post.url }}"
+						class="tile"
+						{% if forloop.index == 2 %}
+						data-reveal-second
+						{% else %}
+						data-reveal
+						{% endif %}>
 						<div class="tile__background" style="background-image: url('{{ site.url }}/assets/images/{{ post.home-image }}')"></div>
 						<!-- post.title -->
 					</a>

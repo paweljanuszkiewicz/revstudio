@@ -6,13 +6,13 @@
 		$elem.attr('data-parallax', layer);
 	}
 
-	// setAttr($('.projects-grid__tile-row:nth-child(7n+1)'), 'downMore');
-	// setAttr($('.projects-grid__tile-row:nth-child(7n+2)'), 'up');
-	// setAttr($('.projects-grid__tile-row:nth-child(7n+3)'), 'up');
-	// setAttr($('.projects-grid__tile-row:nth-child(7n+4)'), 'down');
-	// setAttr($('.projects-grid__tile-row:nth-child(7n+5)'), 'upMore');
-	// setAttr($('.projects-grid__tile-row:nth-child(7n+6)'), 'up');
-	// setAttr($('.projects-grid__tile-row:nth-child(7n+7)'), 'down');
+	setAttr($('.projects-grid__tile-row:nth-child(7n+1)'), 'downMore');
+	setAttr($('.projects-grid__tile-row:nth-child(7n+2)'), 'up');
+	setAttr($('.projects-grid__tile-row:nth-child(7n+3)'), 'up');
+	setAttr($('.projects-grid__tile-row:nth-child(7n+4)'), 'down');
+	setAttr($('.projects-grid__tile-row:nth-child(7n+5)'), 'upMore');
+	setAttr($('.projects-grid__tile-row:nth-child(7n+6)'), 'up');
+	setAttr($('.projects-grid__tile-row:nth-child(7n+7)'), 'down');
 
 
 	function debounce(func, wait, immediate) {
@@ -38,16 +38,16 @@
 	var parallax = debounce(function() {
 		var $position = $(window).scrollTop();
 		$layerDown.css({
-			'transform': 'translateY(' + Math.floor($position/8) + 'px)'
+			'transform': 'translateY(' + Math.floor($position/16) + 'px)'
 		});
 		$layerDownMore.css({
-			'transform': 'translateY(' + Math.floor($position/6) + 'px)'
+			'transform': 'translateY(' + Math.floor($position/12) + 'px)'
 		});
 		$layerUp.css({
-			'transform': 'translateY(' + Math.floor(-1 * $position/8) + 'px)'
+			'transform': 'translateY(' + Math.floor(-1 * $position/16) + 'px)'
 		});
 		$layerUpMore.css({
-			'transform': 'translateY(' + Math.floor(-1 * $position/6) + 'px)'
+			'transform': 'translateY(' + Math.floor(-1 * $position/12) + 'px)'
 		});
 	}, 10);
 

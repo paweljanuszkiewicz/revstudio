@@ -30,6 +30,7 @@ gulp.task('styles', function () {
 gulp.task('scripts', function () {
   return gulp.src(
       ['node_modules/jquery/dist/jquery.js',
+	  'node_modules/scrollreveal/dist/scrollreveal.js',
 	  srcPath + 'js/assets/typed.js',
        srcPath + 'js/scripts/**/*.js'])
     .pipe(sourcemaps.init())

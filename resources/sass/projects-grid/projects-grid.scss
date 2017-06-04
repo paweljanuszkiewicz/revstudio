@@ -87,6 +87,10 @@
 		&:nth-child(7n + 7) { @include tile(4, 7, 150, 1); }
 	}
 
+	&__tile {
+		overflow: hidden;
+	}
+
 	&__heading {
 		position: relative;
 		margin: 0;
@@ -95,7 +99,7 @@
 		font-size: 64px;
 		@media (min-width: $screen-md-min) {
 			position: absolute;
-			top: $grid-gutter-width*5.5;
+			top: $grid-gutter-width*7;
 			font-size: 144px;
 		}
 	}
