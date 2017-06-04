@@ -6,8 +6,8 @@ window.sr = ScrollReveal({
 	distance: '100%',
 
 	// Time in milliseconds.
-	duration: 500,
-	delay: 200,
+	duration: 250,
+	delay: 100,
 
 	// Starting opacity value, before transitioning to the computed opacity.
 	opacity: 0,
@@ -25,14 +25,11 @@ window.sr = ScrollReveal({
 	// 'always' — delay for all reveal animations
 	// 'once'   — delay only the first time reveals occur
 	// 'onload' - delay only for animations triggered by first load
-	useDelay: 'onload',
+	useDelay: 'always',
 
 	// Change when an element is considered in the viewport. The default value
 	// of 0.20 means 20% of an element must be visible for its reveal to occur.
 	viewFactor: 0.5
 });
 
-sr.reveal('[data-reveal]');
-sr.reveal('[data-reveal-second]', {
-	delay: 400
-});
+sr.reveal('[data-reveal]', 200);
