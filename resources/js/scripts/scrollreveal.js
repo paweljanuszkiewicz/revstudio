@@ -6,7 +6,7 @@ window.sr = ScrollReveal({
 	distance: '100%',
 
 	// Time in milliseconds.
-	duration: 250,
+	duration: 350,
 	delay: 100,
 
 	// Starting opacity value, before transitioning to the computed opacity.
@@ -32,4 +32,4 @@ window.sr = ScrollReveal({
 	viewFactor: 0.5
 });
 
-sr.reveal('[data-reveal]', 200);
+sr.reveal('[data-reveal]', 2);
