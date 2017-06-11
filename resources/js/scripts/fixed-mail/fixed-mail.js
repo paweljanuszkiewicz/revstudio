@@ -16,14 +16,16 @@
 
 	function setPosition () {
 		var $element = $('[data-fixed]');
-		$element.removeAttr('style');
-		console.log($element.offset());
-		$element.css({
-	      'position': 'fixed',
-	      'top': $element.offset().top,
-		  'left': $element.offset().left,
-		  'width': $element.width()
-	    });
+
+		if ($element.length != 0) {
+			$element.removeAttr('style');
+			$element.css({
+		      'position': 'fixed',
+		      'top': $element.offset().top,
+			  'left': $element.offset().left,
+			  'width': $element.width()
+		    });
+		}
 	};
 
 	setPosition();

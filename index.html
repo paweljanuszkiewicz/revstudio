@@ -11,7 +11,10 @@ title: Home
 				<div class="projects-grid__tile">
 					<a href="{{ post.url }}" class="tile" data-reveal>
 						<div class="tile__background" style="background-image: url('{{ site.url }}/assets/images/{{ post.home-image }}')"></div>
-						<!-- post.title -->
+						<div class="tile__cta">
+							<p class="tile__cta-name">{{ post.title }}</p>
+							<p class="tile__cta-link">zobacz</p>
+						</div>
 					</a>
 				</div>
 			</div>

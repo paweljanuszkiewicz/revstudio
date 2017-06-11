@@ -13,8 +13,12 @@ title: About
 	<div class="col-xs-12 col-md-10 col-md-push-1">
 		<div class="row">
 			<div class="col-xs-12 about__images">
-				<img src="{{ site.url }}/assets/images/about/background.jpg" alt="" class="about__image-bg">
-				<img src="{{ site.url }}/assets/images/about/me.jpg" alt="" class="about__image-me">
+				<div class="about__image-bg" data-parallax="down">
+					<img src="{{ site.url }}/assets/images/about/background.jpg" alt="" data-reveal>
+				</div>
+				<div class="about__image-me" data-parallax="up">
+					<img src="{{ site.url }}/assets/images/about/me.jpg" alt="" data-reveal>
+				</div>
 			</div>
 			<div class="col-xs-12 col-md-5 col-md-push-7 col-lg-6 col-lg-push-6">
 				<div class="about__text">

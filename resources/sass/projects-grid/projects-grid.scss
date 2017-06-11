@@ -82,9 +82,9 @@
 		&:nth-child(7n + 2) { @include tile(4, 7, 45, 1); }
 		&:nth-child(7n + 3) { @include tile(3, 1, 120, 1); }
 		&:nth-child(7n + 4) { @include tile(3, 7, 0, 1); }
-		&:nth-child(7n + 5) { @include tile(4, 3, 200, 2); }
-		&:nth-child(7n + 6) { @include tile(3, 1, 50, 1); }
-		&:nth-child(7n + 7) { @include tile(4, 7, 150, 1); }
+		&:nth-child(7n + 5) { @include tile(4, 3, 200, 1); }
+		&:nth-child(7n + 6) { @include tile(3, 1, 50, 2); }
+		&:nth-child(7n + 7) { @include tile(4, 7, 150, 3); }
 	}
 
 	&__tile {
