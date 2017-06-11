@@ -13,9 +13,9 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				<h1 class="project__title" data-reveal>{{ page.title }}</h1>
+				<h1 class="project__title" data-reveal-post>{{ page.title }}</h1>
 			</div>
-			<div class="col-xs-12 col-md-5 col-md-push-1" data-reveal>
+			<div class="col-xs-12 col-md-5 col-md-push-1" data-reveal-post>
 				{% capture difference %} {{ page.tags | size | minus:1 }} {% endcapture %}
 				{% unless difference contains '-' %}
 					<div class="project__list list">
@@ -29,7 +29,7 @@
 				{% endunless %}
 			</div>
 			<div class="col-xs-12 col-md-5 col-md-push-1">
-				<div class="project__text" data-reveal>
+				<div class="project__text" data-reveal-post>
 					{{ content }}
 				</div>
 			</div>

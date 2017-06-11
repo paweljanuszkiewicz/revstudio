@@ -39,9 +39,7 @@
 				margin-top: 0;
 			}
 		}
-	}
 
-	&__wrapper {
 		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max){
 			@include make-row;
 		}
@@ -126,6 +124,7 @@
 				max-width: 0;
 			}
 		}
+
 		&:after {
 			content: '';
 			display: block;

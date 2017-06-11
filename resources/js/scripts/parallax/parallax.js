@@ -42,8 +42,6 @@
 			'overflow': 'visible'
 		});
 
-		console.log($layerDown, $layerDownMore, $layerUp, $layerUpMore, $layerUpMoreMore);
-
 		$layerDown.css({
 			'transform': 'translateY(' + Math.floor($position/12) + 'px)'
 		});
