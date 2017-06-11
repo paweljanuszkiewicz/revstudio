@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>{{ page.title  | strip_html }} - revStudio</title>
-	<link rel="stylesheet" href="{{ site.url }}/assets/styles.css">
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles.css">
 </head>
 <body>
 	{% include header.html %}
@@ -40,7 +40,7 @@
 				<ul class="project__images">
 					{% for image in page.images %}
 						<li>
-							<img src="{{ site.url }}/assets/images/{{ image.url }}" alt="{% if image.alt %}{{ image.alt }}{% endif %}">
+							<img src="{{ site.baseurl }}/assets/images/{{ image.url }}" alt="{% if image.alt %}{{ image.alt }}{% endif %}">
 						</li>
 					{% endfor %}
 				</ul>
@@ -52,6 +52,6 @@
 	</div>
 
 	{% include footer.html %}
-	<script src="{{ site.url }}/assets/scripts.js"></script>
+	<script src="{{ site.baseurl }}/assets/scripts.js"></script>
 </body>
 </html>
