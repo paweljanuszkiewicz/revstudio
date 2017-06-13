@@ -1,10 +1,11 @@
-<div class="col-xs-6 col-md-5 col-md-push-1 text-left">
+<div class="col-xs-12 text-xs-center col-sm-6 col-md-5 col-md-push-1 text-sm-left">
 	{% if page.previous.url %}
 		<h5>poprzedni</h5>
 		<a class="next-prev__link" href="{{page.previous.url}}">{{page.previous.title | strip_html}}</a>
 	{% endif %}
+	<div class="visible-xs next-prev__divider"></div>
 </div>
-<div class="col-xs-6 text-right">
+<div class="col-xs-12 text-xs-center col-sm-6 text-sm-right">
 	{% if page.next.url %}
 		<h5>następny</h5>
 		<a class="next-prev__link" href="{{page.next.url}}">{{page.next.title | strip_html}}</a>

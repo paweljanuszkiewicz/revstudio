@@ -1,10 +1,10 @@
 .projects-grid {
 	$this: #{&};
 	$tile: '.tile';
-	$tile-base-height: 332px;
+	$tile-base-height: 100vw;
 
 	position: relative;
-	margin-top: $grid-gutter-width;
+	margin-top: 2*$grid-gutter-width;
 	margin-bottom: 2*$grid-gutter-width;
 
 	@media (min-width: $screen-md-min) {
@@ -74,6 +74,10 @@
 		#{$tile} {
 			// height on mobile
 			height: $tile-base-height;
+
+			@media (min-width: $screen-sm-min) {
+				height: 50vw;
+			}
 		}
 
 		&:nth-child(7n + 1) { @include tile(3, 4, 0, 1); }
@@ -94,7 +98,7 @@
 		margin: 0;
 		z-index: 10;
 		top: $grid-gutter-width;
-		font-size: 64px;
+		font-size: 74px;
 		@media (min-width: $screen-md-min) {
 			position: absolute;
 			top: $grid-gutter-width*7;
@@ -104,16 +108,21 @@
 
 	&__contact {
 		position: absolute;
-		top: $tile-base-height;
+		top: 360px;
 		right: 0;
 		display: inline-block;
+		width: auto;
 		font-size: 20px;
 		color: $gray-base;
 		font-weight: 700;
 		padding-bottom: 4px;
 		z-index: 10;
 
-		@media (max-height: $tile-base-height + 100) {
+		@media (min-width: $screen-sm-min) {
+			top: 330px;
+		}
+
+		@media (max-height: 400px) {
 			top: 80px;
 		}
 

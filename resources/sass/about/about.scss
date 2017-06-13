@@ -1,6 +1,11 @@
 .about {
 	position: relative;
+	padding-top: 50px;
 
+	@media (min-width: $screen-sm-min) {
+		padding-top: 0;
+	}
+	
 	@media (min-width: $screen-md-min) {
 		padding-bottom: $grid-gutter-width*2;
 	}

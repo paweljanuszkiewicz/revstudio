@@ -1,11 +1,12 @@
 .project {
 	&__title {
-		margin-top: $grid-gutter-width*2.5;
+		margin-top: 125px;
 		margin-bottom: $grid-gutter-width*1.5;
 		max-width: 50%;
 		font-size: 50px;
 
 		@media (min-width: $screen-sm-min) {
+			margin-top: $grid-gutter-width*2.5;
 			font-size: 80px;
 		}
 		@media (min-width: $screen-md-min) {
