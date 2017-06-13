@@ -5,7 +5,7 @@
 	@media (min-width: $screen-sm-min) {
 		padding-top: 0;
 	}
-	
+
 	@media (min-width: $screen-md-min) {
 		padding-bottom: $grid-gutter-width*2;
 	}
@@ -15,7 +15,7 @@
 		margin: 0;
 		z-index: 10;
 		top: $grid-gutter-width;
-		font-size: 64px;
+		font-size: 74px;
 
 		@media (min-width: $screen-md-min) {
 			margin-top: $grid-gutter-width;
