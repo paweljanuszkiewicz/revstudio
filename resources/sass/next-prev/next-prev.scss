@@ -41,4 +41,48 @@
 	&__divider {
 		height: 20px;
 	}
+
+	&__contact {
+		margin-top: $grid-gutter-width*1.5;
+		position: relative;
+		display: inline-block;
+		width: auto;
+		font-size: 20px;
+		color: $gray-base;
+		font-weight: 700;
+		padding-bottom: 4px;
+
+		&:hover, &:focus {
+			text-decoration: none;
+			color: $gray-base;
+			&:after {
+				max-width: 0;
+			}
+		}
+
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			max-width: 100%;
+			height: 2px;
+			background-color: $gray-base;
+			transition: ease 400ms all;
+		}
+	}
+
+	&__separator-left {
+		@media (min-width: $screen-sm-min) {
+			border-left: 1px solid $gray-lighter;
+		}
+	}
+
+	&__separator-right {
+		@media (min-width: $screen-sm-min) {
+			border-right: 1px solid $gray-lighter;
+		}
+	}
 }
