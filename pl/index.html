@@ -1,19 +1,19 @@
 ---
-layout: default
+layout: default-pl
 title: Home
 ---
 <div class="projects-grid">
 	<h1 class="projects-grid__heading">rev.<br><span class="h1em"></span><span data-typed="title"></span></h1>
 	<a href="mailto:hello@revstudio.pl" class="projects-grid__contact" data-fixed>hello@revstudio.pl</a>
 	<div class="projects-grid__wrapper">
-		{% for post in site.categories.en %}
+		{% for post in site.categories.pl %}
 			<div class="projects-grid__tile-row">
 				<div class="projects-grid__tile">
 					<a href="{{ post.url }}" class="tile" data-reveal data-project-link>
 						<div class="tile__background" style="background-image: url('{{ site.baseurl }}/assets/images/{{ post.home-image }}')"></div>
 						<div class="tile__cta">
 							<p class="tile__cta-name">{{ post.title }}</p>
-							<p class="tile__cta-link">see more</p>
+							<p class="tile__cta-link">zobacz</p>
 						</div>
 					</a>
 				</div>

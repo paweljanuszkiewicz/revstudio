@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{{ page.title  | strip_html }} - revStudio</title>
+	<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles.css">
+</head>
+<body>
+	{% include header-pl.html %}
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 class="project__title" data-reveal-post>{{ page.title }}</h1>
+			</div>
+			<div class="col-xs-12 col-md-5 col-md-push-1" data-reveal-post>
+				{% capture difference %} {{ page.tags | size | minus:1 }} {% endcapture %}
+				{% unless difference contains '-' %}
+					<div class="project__list list">
+						<h5 class="list__heading">REV.IEW</h5>
+						<ul class="list__list">
+							{% for tag in page.tags %}
+								<li>{{ tag }}</li>
+							{% endfor %}
+						</ul>
+					</div>
+				{% endunless %}
+			</div>
+			<div class="col-xs-12 col-md-5 col-md-push-1">
+				<div class="project__text" data-reveal-post>
+					{{ content }}
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12 col-md-10 col-md-push-1">
+				<ul class="project__images">
+					{% for image in page.images %}
+						<li>
+							<img src="{{ site.baseurl }}/assets/images/{{ image.url }}" alt="{% if image.alt %}{{ image.alt }}{% endif %}">
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+		<div class="row next-prev">
+			{% include project-footer-pl.html %}
+		</div>
+	</div>
+
+	{% include footer-pl.html %}
+	<script src="{{ site.baseurl }}/assets/scripts.js"></script>
+</body>
+</html>
