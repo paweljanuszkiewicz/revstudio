@@ -6,6 +6,18 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>{{ page.title  | strip_html }} - revStudio</title>
 	<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles.css">
+	<script type="text/javascript">
+		var site = '{{ page.name }}';
+	    var userLang = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
+
+	    if ( userLang == 'pl' ) {
+			var address = window.location.href.replace(site, '');
+			address += 'pl/' + site;
+			console.log(address);
+
+			window.location.href = address;
+	    }
+	</script>
 </head>
 <body>
 	{% include header.html %}
