@@ -10,7 +10,7 @@
 	<script type="text/javascript">
 	    var userLang = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
 
-	    if ( userLang == 'pl' ) {
+	    if ( userLang.indexOf('pl') !== -1) {
 			var address = window.location.href.replace('/en/', '/pl/');
 			window.location.href = address;
 	    }
@@ -173,7 +173,7 @@ Zaprezentowane w formie czarnych monogramów, aby pokazać prawidłowość ich f
 	
 </div>
 <div class="col-xs-12 text-center">
-	<a href="mailto:hello@revstudio.pl" class="next-prev__contact">napisz do nas</a>
+	<a href="mailto:hello@revstudio.pl" class="next-prev__contact">contact us</a>
 </div>
 
 		</div>

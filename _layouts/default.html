@@ -10,7 +10,7 @@
 		var site = '{{ page.name }}';
 	    var userLang = navigator.languages ? navigator.languages[0] : (navigator.language || navigator.userLanguage);
 
-	    if ( userLang == 'pl' ) {
+	    if ( userLang.indexOf('pl') !== -1) {
 			var address = window.location.href.replace(site, '');
 			address += 'pl/' + site;
 			console.log(address);
