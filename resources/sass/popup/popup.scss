@@ -1,0 +1,100 @@
+.popup {
+    $this: #{&};
+    position: relative;
+    z-index: 5200;
+
+    &__bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        visibility: hidden;
+        background-color: $gray-base;
+        opacity: 0;
+        transition: ease 400ms all;
+    }
+
+    &__content {
+        position: fixed;
+        top: 0;
+        left: 50%;
+		width: 100%;
+		max-width: 570px;
+		transform: translateX(-50%);
+        height: auto;
+        background-color: #fff;
+        visibility: hidden;
+        opacity: 0;
+        overflow-y: auto;
+        transition: ease 400ms all;
+		padding: 20px;
+
+		@media (min-width: $screen-sm-min) {
+			top: 60px;
+			padding: 40px;
+		}
+
+		@media (min-width: $screen-md-min) {
+			top: 120px;
+			padding: 40px 80px;
+		}
+    }
+
+	&__container {
+		height: auto;
+	}
+
+	&__header {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+
+	&__heading {
+		flex: 1 1 auto;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	&__close {
+		display: block;
+		flex: 0 0 21px;
+		height: 21px;
+		position: relative;
+		margin-right: 4px;
+		cursor: pointer;
+
+		&:after, &:before {
+			content: '';
+			width: 24px;
+			height: 3px;
+			display: block;
+			background-color: $gray-base;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform-origin: center center;
+		}
+
+		&:before {
+			transform: translate(-50%, -50%) rotate(45deg) translateZ(0);
+		}
+
+		&:after {
+			transform: translate(-50%, -50%) rotate(-45deg) translateZ(0);
+		}
+	}
+
+	&--visible {
+        #{$this}__bg {
+            visibility: visible;
+            opacity: .4;
+        }
+
+        #{$this}__content {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

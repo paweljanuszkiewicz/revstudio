@@ -8,6 +8,32 @@
 	<link rel="stylesheet" href="/assets/styles.css">
 </head>
 <body>
+	<div class="popup" data-popup="contact">
+	<div class="popup__bg" data-popup-trigger="contact"></div>
+	<div class="popup__content">
+		<div class="popup__container">
+			<div class="popup__header">
+				<h1 class="popup__heading">let's <br>talk</h1>
+
+				<a href="#" class="popup__close" data-popup-trigger="contact"></a>
+			</div>
+			<form class="form">
+				<div class="form__box">
+					<input
+						type="text"
+						placeholder="Imię i nazwisko"
+						class="form__input"
+					>
+
+					<p class="form__step">1/4</p>
+
+					<div class="form__line" style="width: 25%;"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
 	<header class="header">
 	<div class="container">
 		<div class="row">
@@ -41,7 +67,7 @@
 	<div class="container">
 		<div class="projects-grid">
 	<h1 class="projects-grid__heading">rev.<br><span class="h1em"></span><span data-typed="title"></span></h1>
-	<a href="mailto:hello@revstudio.pl" class="projects-grid__contact" data-fixed>hello@revstudio.pl</a>
+	<a href="mailto:hello@revstudio.pl" class="projects-grid__contact" data-fixed data-popup-trigger="contact">hello@revstudio.pl</a>
 	<div class="projects-grid__wrapper">
 		
 			<div class="projects-grid__tile-row">

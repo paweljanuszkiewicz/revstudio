@@ -1,0 +1,60 @@
+.form {
+	$this: #{&};
+
+	&__box {
+		position: relative;
+	}
+
+	&__input {
+		padding: 16px;
+		padding-right: 50px;
+		border: 2px solid rgba($gray-base, .1);
+		font-weight: 700;
+		display: block;
+		width: 100%;
+
+		&::placeholder {
+			opacity: .1;
+			color: $gray-base;
+		}
+
+		&--active, &:focus {
+			border-color: rgba($gray-base, 1);
+			outline: none;
+
+			&::placeholder {
+				opacity: 1;
+			}
+
+			& + #{$this}__step {
+				visibility: visible;
+				opacity: 1;
+			}
+
+			& + * + #{$this}__line {
+				visibility: visible;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__step {
+		position: absolute;
+		right: 16px;
+		top: 50%;
+		transform: translateY(-50%);
+		opacity: 0;
+		visibility: hidden;
+	}
+
+	&__line {
+		position: absolute;
+		bottom: 2px;
+		border-left: 2px solid rgba(255, 255, 255, 0);
+		border-right: 2px solid rgba(255, 255, 255, 0);
+		height: 4px;
+		background-color: #d8d8d8;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
