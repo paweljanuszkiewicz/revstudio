@@ -31,6 +31,7 @@ gulp.task('scripts', function () {
   return gulp.src(
       ['node_modules/jquery/dist/jquery.js',
 	  'node_modules/scrollreveal/dist/scrollreveal.js',
+	  'node_modules/autosize/dist/autosize.js',
 	  srcPath + 'js/assets/typed.js',
        srcPath + 'js/scripts/**/*.js'])
     .pipe(sourcemaps.init())
