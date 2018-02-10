@@ -3,6 +3,7 @@
 
 	var $inputs = $('[data-form-input]');
 	var $form = $('[data-form="container"]');
+	var $submit = $('[data-form="submit"]');
 
 	$inputs.each(function (index) {
 		var index = index;
@@ -42,21 +43,21 @@
 			budget: {
                 required: false
             }
-        },
-        submitHandler: function ($form) { // for demo
-            var $loader = $(this).find('[data-form="loader"]');
-
-		    $.ajax({
-		      	type: 'POST',
-		      	url: '../mail.php',
-		      	data: $(this).serialize(),
-		      	success: function(data) {
-					$formInfo.text(data.message);
-		      	}
-		    });
-
-		    e.preventDefault();
-			return false;
         }
     });
+
+	$form.submit(function (e) {
+		console.log('sending');
+
+		$.ajax({
+			type: 'POST',
+			url: 'http://127.0.0.1/edsa-revstudio/mail.php',
+			data: $(this).serialize(),
+			success: function(data) {
+				console.log(data);
+			}
+		});
+
+		e.preventDefault();
+	});
 })();
