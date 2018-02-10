@@ -30,6 +30,7 @@ gulp.task('styles', function () {
 gulp.task('scripts', function () {
   return gulp.src(
       ['node_modules/jquery/dist/jquery.js',
+	  'node_modules/jquery-validation/dist/jquery.validate.js',
 	  'node_modules/scrollreveal/dist/scrollreveal.js',
 	  'node_modules/autosize/dist/autosize.js',
 	  srcPath + 'js/assets/typed.js',

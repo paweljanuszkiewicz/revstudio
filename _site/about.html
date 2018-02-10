@@ -30,12 +30,13 @@
 				<a href="#" class="popup__close" data-popup-trigger="contact"></a>
 			</div>
 
-			<form class="popup__form form"data-form="container">
+			<form class="popup__form form" data-form="container">
 				<div class="form__box">
 					<input
 						type="text"
 						placeholder="Imię i nazwisko"
 						class="form__input"
+						name="name"
 						data-form="text"
 						data-form-input
 						data-form-first
@@ -49,6 +50,7 @@
 				<div class="form__box">
 					<input
 						type="email"
+						name="email"
 						placeholder="Adres e-mail"
 						class="form__input"
 						data-form="email"
@@ -63,6 +65,7 @@
 				<div class="form__box">
 					<textarea
 						type="text"
+						name="message"
 						placeholder="Jak możemy Ci pomóc?"
 						class="form__input form__input--textarea"
 						data-form="textarea"
@@ -87,6 +90,11 @@
 
 					<div class="form__line" style="width: 100%;"></div>
 				</div>
+
+				<input
+					type="hidden"
+					name="dont_fill"
+				>
 
 				<div class="text-center">
 					<button type="submit" class="form__submit">wyślij wiadomość</button>
