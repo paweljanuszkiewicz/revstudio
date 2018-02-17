@@ -51,7 +51,7 @@
 
 		$.ajax({
 			type: 'POST',
-			url: '../mail.php',
+			url: 'http://revstudio.pl/beta/mail.php',
 			data: $(this).serialize(),
 			success: function(data) {
 				console.log(data);

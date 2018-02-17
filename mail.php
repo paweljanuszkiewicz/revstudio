@@ -1,6 +1,7 @@
 <?php
-  $to = 'hello@revstudio.pl';
+  $to = 'pawel17j@gmail.com';
   require 'vendor/autoload.php';
+  use PHPMailer\PHPMailer\PHPMailer;
 
   $success = false;
   $successMsg = "Something went wrong, try again";
@@ -8,16 +9,15 @@
   function sendMail ($subject, $body, $to, &$success, &$successMsg) {
     $mail = new PHPMailer;
 
-    $mail->isSMTP();                                            // Set mailer to use SMTP
-	$mail->isAuth=false;
-    $mail->Host = 'ssl0.ovh.net';    							// Specify main and backup SMTP servers
+    $mail->Host = 'smtp.gmail.com';    							// Specify main and backup SMTP servers
+	$mail->Port = 465;
     $mail->SMTPAuth = true;                                     // Enable SMTP authentication
-    $mail->Username = 'no-reply@revstudio.pl';               	// SMTP username
-    $mail->Password = 'sKJ*d>9uV?#shmHEYrHVHe8kJTcMTU';         // SMTP password
-    $mail->SMTPSecure = 'ssl';                                  // Enable encryption, 'ssl' also accepted
+    $mail->Username = '9qjzo4zrzuzgw11ay7yb2bxw@gmail.com';     // SMTP username
+    $mail->Password = '';         								// SMTP password
+    $mail->SMTPSecure = 'tls';                                  // Enable encryption, 'ssl' also accepted
 
-    $mail->From = 'no-reply@revstudio.pl';
-    $mail->FromName = 'revstudio.pl - No-Reply';
+	$mail->SMTPDebug = 1;
+	$mail->SetFrom('9qjzo4zrzuzgw11ay7yb2bxw@gmail.com', 'revstudio.pl - No-Reply');
     $mail->addAddress($to);                               // Name is optional
 
     $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
@@ -27,7 +27,7 @@
     $mail->Body    = $body;
     $mail->AltBody = $body;
 
-    if(!$mail->send()) {
+	if(!$mail->send()) {
       $success = false;
       $successMsg = "Something went wrong, try again";
     } else {
