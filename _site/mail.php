@@ -1,5 +1,5 @@
 <?php
-  $to = 'pawel17j@gmail.com';
+  $to = 'hello@revstudio.pl';
   require 'vendor/autoload.php';
   use PHPMailer\PHPMailer\PHPMailer;
 
