@@ -129,4 +129,29 @@
 			transition: ease 400ms all;
 		}
 	}
+
+	&__info {
+		visibility: hidden;
+		opacity: 0;
+		transition: all 200ms ease;
+
+		&--success {
+			color: green;
+		}
+
+		&--error {
+			color: red;
+		}
+
+		&--visible {
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+
+	&--disabled {
+		#{$this}__input, #{$this}__submit {
+			opacity: .2;
+		}
+	}
 }

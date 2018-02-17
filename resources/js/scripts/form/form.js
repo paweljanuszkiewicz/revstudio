@@ -4,6 +4,7 @@
 	var $inputs = $('[data-form-input]');
 	var $form = $('[data-form="container"]');
 	var $submit = $('[data-form="submit"]');
+	var $info = $('[data-form="info"]');
 
 	$inputs.each(function (index) {
 		var index = index;
@@ -47,16 +48,36 @@
     });
 
 	$form.submit(function (e) {
-		console.log('sending');
+		if ($(this).valid()) {
+			$info.removeClass('form__info--visible');
 
-		$.ajax({
-			type: 'POST',
-			url: 'http://revstudio.pl/beta/mail.php',
-			data: $(this).serialize(),
-			success: function(data) {
-				console.log(data);
-			}
-		});
+			// $inputs.attr('disabled', true);
+			// $submit.attr('disabled', true);
+			$form.addClass('form--disabled');
+
+			$.ajax({
+				type: 'POST',
+				// url: 'http://revstudio.pl/beta/mail.php',
+				data: $form.serialize(),
+				success: function(data) {
+					$info.text(data.message);
+
+					$info.removeClass('form__info--error form__info--success');
+
+					if (data.success) {
+						$info.addClass('form__info--success');
+					} else {
+						$info.addClass('form__info--error');
+					}
+
+					// $inputs.attr('disabled', false);
+					// $submit.attr('disabled', false);
+					$form.removeClass('form--disabled');
+
+					$info.addClass('form__info--visible');
+				}
+			});
+		}
 
 		e.preventDefault();
 	});

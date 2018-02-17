@@ -16,7 +16,6 @@
     $mail->Password = '';         								// SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable encryption, 'ssl' also accepted
 
-	$mail->SMTPDebug = 1;
 	$mail->SetFrom('9qjzo4zrzuzgw11ay7yb2bxw@gmail.com', 'revstudio.pl - No-Reply');
     $mail->addAddress($to);                               // Name is optional
 
@@ -32,7 +31,7 @@
     	$successMsg = "Something went wrong, try again";
     } else {
     	$success = true;
-    	$successMsg = "Message is sent";
+    	$successMsg = "Message has been sent";
     }
   }
 
