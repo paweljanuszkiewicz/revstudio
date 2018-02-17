@@ -9,12 +9,13 @@
   function sendMail ($subject, $body, $to, &$success, &$successMsg) {
     $mail = new PHPMailer;
 
+	$mail->IsSMTP();
+	$mail->Port = 587;
 	$mail->Host = 'smtp.gmail.com';    							// Specify main and backup SMTP servers
-	$mail->Port = 465;
     $mail->SMTPAuth = true;                                     // Enable SMTP authentication
     $mail->Username = '9qjzo4zrzuzgw11ay7yb2bxw@gmail.com';     // SMTP username
     $mail->Password = '';         								// SMTP password
-    $mail->SMTPSecure = 'tls';                                  // Enable encryption, 'ssl' also accepted
+    $mail->SMTPSecure = 'tls';                               // Enable encryption, 'ssl' also accepted
 
 	$mail->SMTPDebug = 1;
 	$mail->SetFrom('9qjzo4zrzuzgw11ay7yb2bxw@gmail.com', 'revstudio.pl - No-Reply');
