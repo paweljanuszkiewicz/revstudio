@@ -51,13 +51,13 @@
 		if ($(this).valid()) {
 			$info.removeClass('form__info--visible');
 
-			// $inputs.attr('disabled', true);
-			// $submit.attr('disabled', true);
+			$inputs.attr('disabled', true);
+			$submit.attr('disabled', true);
 			$form.addClass('form--disabled');
 
 			$.ajax({
 				type: 'POST',
-				// url: 'http://revstudio.pl/beta/mail.php',
+				url: 'http://revstudio.pl/beta/mail.php',
 				data: $form.serialize(),
 				success: function(data) {
 					$info.text(data.message);
@@ -70,8 +70,8 @@
 						$info.addClass('form__info--error');
 					}
 
-					// $inputs.attr('disabled', false);
-					// $submit.attr('disabled', false);
+					$inputs.attr('disabled', false);
+					$submit.attr('disabled', false);
 					$form.removeClass('form--disabled');
 
 					$info.addClass('form__info--visible');
