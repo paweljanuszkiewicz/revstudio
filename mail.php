@@ -9,7 +9,7 @@
   function sendMail ($subject, $body, $to, &$success, &$successMsg) {
     $mail = new PHPMailer;
 
-    $mail->Host = 'smtp.gmail.com';    							// Specify main and backup SMTP servers
+	$mail->Host = 'smtp.gmail.com';    							// Specify main and backup SMTP servers
 	$mail->Port = 465;
     $mail->SMTPAuth = true;                                     // Enable SMTP authentication
     $mail->Username = '9qjzo4zrzuzgw11ay7yb2bxw@gmail.com';     // SMTP username
@@ -28,11 +28,11 @@
     $mail->AltBody = $body;
 
 	if(!$mail->send()) {
-      $success = false;
-      $successMsg = "Something went wrong, try again";
+    	$success = false;
+    	$successMsg = "Something went wrong, try again";
     } else {
-      $success = true;
-      $successMsg = "Message is sent";
+    	$success = true;
+    	$successMsg = "Message is sent";
     }
   }
 
