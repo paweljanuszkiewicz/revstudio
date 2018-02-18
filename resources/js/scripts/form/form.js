@@ -51,14 +51,16 @@
 		if ($(this).valid()) {
 			$info.removeClass('form__info--visible');
 
+			$form.addClass('form--disabled');
+			var data = $form.serialize();
+
 			$inputs.attr('disabled', true);
 			$submit.attr('disabled', true);
-			$form.addClass('form--disabled');
 
 			$.ajax({
 				type: 'POST',
 				url: 'http://revstudio.pl/beta/mail.php',
-				data: $form.serialize(),
+				data: data,
 				success: function(data) {
 					$info.text(data.message);
 

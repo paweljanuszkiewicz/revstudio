@@ -1,5 +1,5 @@
 <?php
-  $to = 'pawel17j@gmail.com';
+  $to = 'hello@revstudio.pl';
   require 'vendor/autoload.php';
   use PHPMailer\PHPMailer\PHPMailer;
 
@@ -51,6 +51,7 @@
   }
 
   if (($_SERVER['REQUEST_METHOD'] === 'POST') && $_POST['dont_fill'] === '') {
+	  print_r($_POST);
     $name = strip_tags($_POST['name']);
     $email = strip_tags($_POST['email']);
     $message = strip_tags($_POST['message']);
