@@ -20,6 +20,7 @@
 	$mail->SetFrom('9qjzo4zrzuzgw11ay7yb2bxw@gmail.com', 'revstudio.pl - No-Reply');
     $mail->addAddress($to);                               // Name is optional
 
+	$mail->CharSet = 'UTF-8';
     $mail->WordWrap = 50;                                 // Set word wrap to 50 characters
     $mail->isHTML(true);                                 // Set email format
 
@@ -32,7 +33,7 @@
     	$successMsg = "Something went wrong, try again";
     } else {
     	$success = true;
-    	$successMsg = "Message is sent";
+    	$successMsg = "Message has been sent";
     }
   }
 
@@ -51,7 +52,6 @@
   }
 
   if (($_SERVER['REQUEST_METHOD'] === 'POST') && $_POST['dont_fill'] === '') {
-	  print_r($_POST);
     $name = strip_tags($_POST['name']);
     $email = strip_tags($_POST['email']);
     $message = strip_tags($_POST['message']);
