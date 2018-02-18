@@ -59,7 +59,7 @@
 
 			$.ajax({
 				type: 'POST',
-				url: 'http://revstudio.pl/beta/mail.php',
+				url: 'http://revstudio.pl/mail.php',
 				data: data,
 				success: function(data) {
 					$info.text(data.message);
