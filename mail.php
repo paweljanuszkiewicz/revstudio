@@ -1,5 +1,5 @@
 <?php
-  $to = 'hello@revstudio.pl';
+  $to = 'pawel17j@gmail.com';
   require 'vendor/autoload.php';
   use PHPMailer\PHPMailer\PHPMailer;
 
@@ -16,6 +16,7 @@
     $mail->Password = '';         								// SMTP password
     $mail->SMTPSecure = 'tls';                                  // Enable encryption, 'ssl' also accepted
 
+	$mail->SMTPDebug = 1;
 	$mail->SetFrom('9qjzo4zrzuzgw11ay7yb2bxw@gmail.com', 'revstudio.pl - No-Reply');
     $mail->addAddress($to);                               // Name is optional
 
@@ -31,7 +32,7 @@
     	$successMsg = "Something went wrong, try again";
     } else {
     	$success = true;
-    	$successMsg = "Message has been sent";
+    	$successMsg = "Message is sent";
     }
   }
 
