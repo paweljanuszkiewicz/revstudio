@@ -47,7 +47,7 @@
 		position: relative;
 		display: inline-block;
 		width: auto;
-		font-size: 20px;
+		font-size: 36px;
 		color: $gray-base;
 		font-weight: 700;
 		padding-bottom: 4px;
@@ -76,13 +76,13 @@
 
 	&__separator-left {
 		@media (min-width: $screen-sm-min) {
-			border-left: 1px solid $gray-lighter;
+			border-left: 1px solid #fff;
 		}
 	}
 
 	&__separator-right {
 		@media (min-width: $screen-sm-min) {
-			border-right: 1px solid $gray-lighter;
+			border-right: 1px solid #fff;
 		}
 	}
 }

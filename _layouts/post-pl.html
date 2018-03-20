@@ -8,9 +8,11 @@
 	<link rel="stylesheet" href="{{ site.baseurl }}/assets/styles.css">
 </head>
 <body class="post">
-	{% include header-pl.html %}
+	<div class="post__header">
+		{% include header-pl.html %}
+	</div>
 
-	<div class="post__content">
+	<div class="post__content" data-post="content">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
@@ -50,7 +52,7 @@
 		</div>
 	</div>
 
-	<div class="post__footer">
+	<div class="post__footer" data-post="footer">
 		<div class="container">
 			<div class="row next-prev">
 				{% include project-footer-pl.html %}
