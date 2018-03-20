@@ -1,4 +1,5 @@
 destination: _site
+baseurl: "//revstudio.pl/beta/"
 exclude:
   - package.json
   - node_modules
