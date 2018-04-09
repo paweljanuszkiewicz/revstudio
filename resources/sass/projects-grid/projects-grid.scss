@@ -1,7 +1,7 @@
 .projects-grid {
 	$this: #{&};
 	$tile: '.tile';
-	$tile-base-height: 100vw;
+	$tile-base-height: auto;
 
 	position: relative;
 	margin-top: 2*$grid-gutter-width;
