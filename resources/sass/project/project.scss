@@ -6,8 +6,8 @@
 		font-size: 50px;
 
 		@media (min-width: $screen-sm-min) {
-			margin-top: $grid-gutter-width*2.5;
-			font-size: 80px;
+			margin-top: $grid-gutter-width*2;
+			font-size: 100px;
 		}
 		@media (min-width: $screen-md-min) {
 			font-size: 120px;
