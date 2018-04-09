@@ -1,5 +1,9 @@
 .list {
-	margin-bottom: 4em;
+	margin-bottom: 3em;
+
+	@media (min-width: $screen-md-min) {
+		margin-bottom: 4em;
+	}
 
 	&__heading {
 		text-transform: uppercase;

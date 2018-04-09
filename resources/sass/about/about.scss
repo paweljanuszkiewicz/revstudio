@@ -17,13 +17,23 @@
 		top: $grid-gutter-width;
 		font-size: 74px;
 
+		@media (min-width: $screen-sm-min) {
+			position: absolute;
+			font-size: 100px;
+		}
+
 		@media (min-width: $screen-md-min) {
+			position: relative;
 			margin-top: $grid-gutter-width;
 			font-size: 120px;
 		}
 	}
 
 	&__images {
+		@media (min-width: $screen-sm-min) {
+			margin-top: 20px;
+		}
+
 		@media (min-width: $screen-md-min) {
 			margin-top: -50px;
 			margin-bottom: -250px;
@@ -56,6 +66,12 @@
 		@media (min-width: $screen-md-min) {
 			max-width: 370px;
 			margin-left: 18%;
+		}
+	}
+
+	&__left-col {
+		@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+			margin-top: -250px;
 		}
 	}
 
@@ -106,7 +122,7 @@
 	}
 
 	&__list-abs {
-		@media (min-width: $screen-sm-min) {
+		@media (min-width: $screen-md-min) {
 			position: absolute;
 			top: 156px;
 			left: 250px;
