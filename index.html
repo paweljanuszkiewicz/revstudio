@@ -6,7 +6,7 @@ title: Home
 	<h1 class="projects-grid__heading">rev.<br><span class="h1em"></span><span data-typed="title"></span></h1>
 	<a href="mailto:hello@revstudio.pl" class="projects-grid__contact" data-fixed data-popup-trigger="contact">hello@revstudio.pl</a>
 	<div class="projects-grid__wrapper">
-		{% for post in site.categories.en %}
+		{% for post in site.categories.pl %}
 			<div class="projects-grid__tile-row">
 				<div class="projects-grid__tile">
 					<a href="{{ post.url }}" class="tile" data-reveal data-project-link>
@@ -28,7 +28,6 @@ title: Home
 									{{ tag }} <br>
 								{% endfor %}
 							</p>
-							<p class="tile__cta-link">see more</p>
 						</div>
 					</a>
 				</div>

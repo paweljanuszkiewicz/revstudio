@@ -5,17 +5,25 @@
 	overflow: hidden;
 	background-color: rgba(255, 255, 255, 0);
 
+	&:focus {
+		text-decoration: none;
+	}
+
 	&:hover {
-		#{$this}__background {
-			transform: translateZ(0) scale(1.2);
-		}
+		text-decoration: none;
+		
+		@media (min-width: $screen-md-min) {
+			#{$this}__background {
+				transform: translateZ(0) scale(1.2);
+			}
 
-		#{$this}__cta {
-			opacity: 1;
+			#{$this}__cta {
+				opacity: 1;
 
-			&-link {
-				&:after {
-					max-width: 100%;
+				&-link {
+					&:after {
+						max-width: 100%;
+					}
 				}
 			}
 		}
@@ -33,7 +41,7 @@
 		padding: 2rem;
 		transition: ease 300ms all;
 
-		@media (min-width: $screen-sm-min) {
+		@media (min-width: $screen-md-min) {
 			display: block;
 		}
 
@@ -78,8 +86,13 @@
 			color: $text-color;
 			line-height: 24px;
 
-			&:focus {
-				text-decoration: none;
+			@media (min-width: $screen-sm-min) {
+				padding-top: 30px;
+				padding-bottom: 30px;
+			}
+
+			@media (min-width: $screen-md-min) {
+				display: none;
 			}
 
 			&-name {
@@ -102,6 +115,10 @@
 		transition: ease 400ms all;
 
 		@media (min-width: $screen-sm-min) {
+			height: 420px;
+		}
+
+		@media (min-width: $screen-md-min) {
 			position: absolute;
 			left: 0;
 			top: 0;
