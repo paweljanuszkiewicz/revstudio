@@ -122,7 +122,7 @@
 	&__contact {
 		position: absolute;
 		top: 360px;
-		right: 0;
+		right: -16px;
 		display: inline-block;
 		width: auto;
 		font-size: 20px;
@@ -133,6 +133,7 @@
 
 		@media (min-width: $screen-sm-min) {
 			top: 330px;
+			right: 0;
 		}
 
 		@media (max-height: 400px) {
