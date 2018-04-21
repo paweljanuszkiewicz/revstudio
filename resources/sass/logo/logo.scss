@@ -4,7 +4,11 @@
 
 	&--header {
 		#{$this}__img {
-			max-height: 28px;
+			max-height: 23px;
+
+			@media (min-width: $screen-sm-min) {
+				max-height: 28px;
+			}
 		}
 	}
 

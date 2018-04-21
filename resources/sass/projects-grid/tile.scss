@@ -11,7 +11,7 @@
 
 	&:hover {
 		text-decoration: none;
-		
+
 		@media (min-width: $screen-md-min) {
 			#{$this}__background {
 				transform: translateZ(0) scale(1.2);
@@ -107,8 +107,9 @@
 	}
 
 	&__background {
-		height: 330px;
+		height: 104vw;
 		background-size: cover;
+		background-position: center center;
 		background-repeat: no-repeat;
 		-webkit-backface-visibility: hidden;
     	-webkit-transform: translateZ(0) scale(1.0, 1.0);
