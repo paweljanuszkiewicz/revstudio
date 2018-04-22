@@ -48,11 +48,12 @@
 		&-name {
 			color: #fff;
 			font-weight: 700;
+			font-family: $headings-font-family;
 		}
 
 		&-tags {
 			color: #fff;
-			font-size: 14px;
+			font-size: 12px;
 			line-height: 1.7em;
 		}
 
@@ -63,6 +64,7 @@
 			width: calc(100% - 4rem);
 			bottom: 0;
 			font-weight: 700;
+			font-family: $headings-font-family;
 			padding-bottom: .3em;
 			transform: translateY(-100%);
 			margin-bottom: 0;
@@ -97,11 +99,12 @@
 
 			&-name {
 				font-weight: 700;
+				font-family: $headings-font-family;
 			}
 
 			&-tags {
 				font-weight: 300;
-				font-size: 14px;
+				font-size: 12px;
 			}
 		}
 	}

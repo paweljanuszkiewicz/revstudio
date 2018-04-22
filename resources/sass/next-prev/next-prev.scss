@@ -12,6 +12,7 @@
 		position: relative;
 		color: $text-color;
 		font-weight: $headings-font-weight;
+		font-family: $headings-font-family;
 		&:hover, &:focus {
 			color: $gray-dark;
 			text-decoration: none;
@@ -50,6 +51,7 @@
 		font-size: 36px;
 		color: $gray-base;
 		font-weight: 700;
+		font-family: $headings-font-family;
 		padding-bottom: 4px;
 
 		&:hover, &:focus {

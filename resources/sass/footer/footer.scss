@@ -2,6 +2,7 @@
 	position: relative;
 	padding-bottom: $grid-gutter-width;
 	z-index: 100;
+	font-size: 16px;
 
 	@media (min-width: $screen-md-min) {
 		padding-bottom: $grid-gutter-width*2;
@@ -9,6 +10,7 @@
 
 	&__copy {
 		font-weight: 700;
+		font-family: $headings-font-family;
 	}
 
 	&__logo {
@@ -21,6 +23,7 @@
 	&__menu {
 		display: block;
 		font-weight: 700;
+		font-family: $headings-font-family;
 		list-style: none;
 
 		li {

@@ -28,10 +28,11 @@
 		}
 	};
 
-	setPosition();
+	$(window).on('load', function () {
+		setPosition();
+	})
 
 	var setPositionDebounce = debounce(setPosition, 200);
 
 	$(this).on('resize', setPositionDebounce);
-
 })(window);

@@ -29,17 +29,20 @@
         overflow-y: auto;
         transition: ease 400ms all;
 		padding: 20px;
+		padding-bottom: 40px;
 
 		@media (min-width: $screen-sm-min) {
 			top: 60px;
 			max-height: calc(100% - 60px);
 			padding: 40px;
+			padding-bottom: 60px;
 		}
 
 		@media (min-width: $screen-md-min) {
 			top: 120px;
 			max-height: calc(100% - 120px);
 			padding: 40px 80px;
+			padding-bottom: 60px;
 		}
     }
 
