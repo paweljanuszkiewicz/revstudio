@@ -162,4 +162,58 @@
 			transition: ease 400ms all;
 		}
 	}
+
+    &__cta {
+		@media (min-width: $screen-md-min) {
+			padding-bottom: 30px;
+		}
+
+		&-heading {
+			font-size: 48px;
+
+			@media (min-width: $screen-sm-min) {
+				font-size: 80px;
+			}
+
+			@media (min-width: $screen-md-min) {
+				font-size: 100px;
+			}
+		}
+
+		&-link {
+			position: relative;
+			display: inline-block;
+			margin-top: 10px;
+			font-size: 16px;
+			color: $gray-base;
+			font-weight: 700;
+			font-family: $headings-font-family;
+
+			@media (min-width: $screen-sm-min) {
+				font-size: 30px;
+			}
+
+			&:hover, &:focus {
+				text-decoration: none;
+				color: $gray-base;
+
+				&:after {
+					max-width: 100%;
+				}
+			}
+
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				max-width: 0;
+				height: 2px;
+				background-color: $gray-base;
+				transition: ease 400ms all;
+			}
+		}
+    }
 }
