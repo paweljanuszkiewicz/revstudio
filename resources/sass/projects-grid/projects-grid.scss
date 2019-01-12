@@ -165,7 +165,7 @@
 
     &__cta {
 		@media (min-width: $screen-md-min) {
-			padding-bottom: 30px;
+            transform: translateY(-80px);
 		}
 
 		&-heading {
